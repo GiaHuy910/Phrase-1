@@ -1,22 +1,177 @@
+/*BODY */
+body {
+  margin-left: -1px;
+  height: 100%;
+  padding: 0;
+}
+
+/*LOGO */
 #web_logo {
   width: 5vw;
   height: 10vh;
-  margin-top: 3px;
-  margin-left: 3px;
+  margin-top: 2vh;
+  margin-left: 1vw;
 }
 .header {
+  width: 100%;
   display: flex;
+  align-items: center;
   gap: 0; /* khoảng cách logo – chữ */
 }
 #Weebu {
-  font-size: 30px;
+  font-size: 50px;
   font-style: bold;
   color: black;
-  margin-top: 15px;
+  margin-top: 2vh;
 }
 #Shop {
   font-size: 30px;
   font-style: bold;
-  color: crimson;
-  margin-top: 15px;
+  color: rgb(239, 112, 112);
+  margin-top: 4vh;
+}
+
+/*SEARCH BAR */
+.search_wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  border-radius: 999px;
+}
+.search_button {
+  top: 58.5%;
+  right: 0vw;
+  transform: translateY(-50%);
+  position: absolute;
+  height: 50px;
+  background: rgb(239, 112, 112);
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.search_bar {
+  font-size: 1.5vw;
+  width: 50vw;
+  min-width: 180px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 999px;
+}
+
+/*LANGUAGE */
+.languague {
+  width: 3vw;
+  min-width: 20px;
+  height: auto;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
+/*CART */
+.cart {
+  width: 3vw;
+  min-width: 20px;
+  height: auto;
+  margin-top: 1.6vh;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
+/*PROFILE */
+.profile {
+  width: 3.5vw;
+  min-width: 20px;
+  height: auto;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
+/*LOG IN */
+.create_account_button {
+  color: rgb(239, 112, 112);
+  border-color: rgb(239, 112, 112);
+  font-size: 1.2vw;
+  position: relative;
+  width: 13vw;
+  min-width: 50px;
+  height: 6vh;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  cursor: pointer;
+  z-index: 1;
+}
+.create_account_button:before {
+  content: "";
+  position: absolute;
+  background: rgb(239, 112, 112);
+  width: 13vw;
+  min-width: 50px;
+  height: 6vh;
+  border-radius: 999px;
+  top: -100%;
+  left: -100%;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+.create_account_button:hover {
+  color: white;
+}
+.create_account_button:hover::before {
+  top: 0;
+  left: 0;
+}
+.create_account_button:active::before {
+  background: white;
+  transition: background 0.1s;
+}
+.create_account_button:active {
+  color: rgb(239, 112, 112);
+}
+
+/*FOOTER */
+footer {
+  width: auto;
+  height: 130px;
+  font-size: 1vw;
+  color: white;
+  background: color-mix(in srgb, rgb(239, 112, 112) 40%, dodgerblue 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/*CONTENT */
+/*UTILS_BTN */
+.utils_btn {
+  position: relative;
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 1.5vw;
+  width: 15vw;
+  height: 8vh;
+  cursor: pointer;
+}
+.utils_btn:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgb(26, 34, 41);
+  transition: all 0.5s ease;
+}
+.utils_btn:hover::after {
+  width: 100%;
+  left: 0;
 }
